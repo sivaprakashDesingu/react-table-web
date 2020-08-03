@@ -1,0 +1,229 @@
+/* add css module styles here (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.table_components,.table_components * {
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  font-size:14px;
+  font-family: 'Roboto', sans-serif;
+}
+.simple_table{
+  width:100%;
+  background:#fff;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  max-height: 450px;
+}
+.simple_table .table_header_row{
+  font-weight:700;
+  display:flex;
+  height:47px;
+  align-items:flex-start;
+  border-bottom:1px solid #ddd; 
+}
+.body_section{
+  height:calc(100% - 47px);
+  overflow:auto;
+}
+.simple_table  .table_body_row {
+  display:flex;
+  border-bottom:1px solid #ddd;
+  align-items:flex-start;
+}
+
+
+.simple_table .table_body_cell{
+  display:block;
+  flex-grow: 1;
+  flex-basis: 0;
+  padding:15px;
+  border-top:0;
+  line-height:24px;
+}
+.simple_table .table_header_cell{
+  display:block;
+  flex-grow: 1;
+  flex-basis: 0; 
+  padding:15px;
+  border-top:0;
+}
+
+.table_components .top_search_container{
+  display:flex;
+  justify-content:flex-end;
+  padding:30px 10px 10px;
+}
+
+.table_components .top_search_container .search_section{
+  width:200px;
+  max-width:200px;
+  display:flex;
+  align-items: center;
+  
+}
+.table_components .top_search_container  .textboxwrapper{
+  width:100%;
+}
+.table_components .top_search_container .filter_icon_section{
+  width:30px;
+  display:flex;
+  margin-left: 20px;
+  align-items: center;
+}
+.top_search_container .filter_icon_section .filter_icon{
+  position: relative;
+  top:8px;
+  cursor: pointer;
+}
+/* TABLE FOOTER CSS MODULE */
+.table_components .table_footer_section{
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  padding: 15px 10px 15px;
+  justify-content: flex-end;
+  max-height: 75px;
+  box-shadow:0px -1px 3px rgba(0,0,0,0.15);
+}
+.table_footer_section .result_count_section{
+  width:100px;
+  margin-right:20px;
+}
+.table_footer_section .result_count_display_section{
+  margin-right:20px;
+  width:auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.table_footer_section .pagination_section{
+  width: 50px;
+  display: flex;
+  position: relative;
+  top: 50%;
+  transform: translateY(-20%);
+  justify-content:space-between;
+}
+.pagination_section .next{
+  transform: rotate(180deg);
+  position: relative;
+  top: -3px;
+}
+.pagination_section .next,.pagination_section  .prev{
+  width:20px;
+  cursor: pointer;
+}
+.pagination_section .next.disable,.pagination_section .prev.disable{
+  opacity:.5;
+  pointer-events: none;
+}
+.table_components .select_wrapper_material{
+  padding: 24px 0 0;
+}
+
+.table_components .overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9999999;
+  font-weight: 300;
+  font-family: "BuenosAires-Light";
+  display: block;
+  overflow: auto;
+}
+
+
+/* Filter Form */
+.table_components .filter_form_wrapper{
+  width:500px;
+  display:flex;
+  background:#fff;
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+.table_components .filter_form{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  width:100%;
+}
+.table_components .filter_form .field_section{
+  display:flex;
+  width: 100%;
+  justify-content:space-between;
+  align-items:flex-end;
+  flex-wrap:wrap;
+  padding:0 20px;
+}
+
+.table_components .filter_form .select_wrapper_material .select_label{
+  color: #aaa;
+  top:32px;
+}
+.table_components .filter_form  .select_wrapper_material.floated .select_label{
+  top: 10px;
+  font-size: 12px;
+  color: #3399FF;
+  transition: 0.3s;
+}
+
+.table_components .filter_form  .labeleffect .effect_2 ~ .focus_border {
+  background:#ddd;
+  height:1px;
+}
+.table_components .filter_form .form_filed_item{
+  width:45%;
+}
+.table_components .filter_form .button_container{
+  display:flex;
+  justify-content:flex-start;
+  padding:20px 20px;
+  box-shadow: 0 -1px 19px rgba(0,0,0,0.5);
+}
+.table_components .filter_form .button_container .button{
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  padding: 0 20px;
+  margin-right: 15px;
+  min-width: 120px;
+  border-radius:3px;
+  height:40px;
+  transition:.3s ease all;
+}
+.table_components .filter_form  .button_container .button.submit_button{
+  border:1px solid #009688;
+  background:#009688;
+  color:#fff;
+}
+.table_components .filter_form  .button_container .button.submit_button:hover{
+  background:#04756b;
+}
+.table_components .filter_form .button_container .button.rest_button{
+  border:1px solid #009688;
+  background:#fff;
+  color:#009688;
+}
+.table_components .filter_form .button_container .button.rest_button:hover{
+  background:#009688;
+  color:#fff;
+}
+.table_components .filter_form  .close_icon{
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0px 19px rgba(0,0,0,0.5);
+  padding: 20px 20px;
+}
+.table_components .no_data_found{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
